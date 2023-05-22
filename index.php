@@ -63,9 +63,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   // ранее в сессию записан факт успешного логина.
   if (empty($errors) && !empty($_COOKIE[session_name()]) &&
       session_start() && !empty($_SESSION['login'])) {
-    $user = 'u52992';
-    $pass = '5447200';
-    $db = new PDO('mysql:host=localhost;dbname=u52992', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+    $user = 'u52996';
+    $pass = '6060818';
+    $db = new PDO('mysql:host=localhost;dbname=u52996', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
     try{
       $stmt=$db->prepare("SELECT id  FROM user WHERE login=?");
       $stmt->bindParam(1,$_SESSION['login']);
@@ -172,9 +172,9 @@ else{
     setcookie('ability_error', '', 100000);
   }
 
-  $user = 'u52992';
-	$pass = '5447200';	
-    $db = new PDO('mysql:host=localhost;dbname=u52992', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+  $user = 'u52996';
+	$pass = '6060818';	
+    $db = new PDO('mysql:host=localhost;dbname=u52996', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
   // Проверяем меняются ли ранее сохраненные данные или отправляются новые.
   if (!empty($_COOKIE[session_name()]) &&
   session_start() && !empty($_SESSION['login'])) {

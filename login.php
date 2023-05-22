@@ -33,13 +33,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 <style>
   .login{
-    font-family: "Montserrat", sans-serif;
     max-width: 960px;
     text-align: center;
     margin: 0 auto;
     padding: 40px;
     width: 250px;
-    background-color: rgb(253, 197, 123);
+    background-color: rgba(143, 189, 234, 0.6);
     border: 2px solid black;
   }
 </style>
@@ -62,9 +61,9 @@ else {
   $pswrd=$_POST['pass'];
   $uid=0;
   $error=TRUE;
-  $user = 'u52992';
-  $pass = '5447200';
-  $db1 = new PDO('mysql:host=localhost;dbname=u52992', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+  $user = 'u52996';
+  $pass = '6060818';
+  $db1 = new PDO('mysql:host=localhost;dbname=u52996', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
   if(!empty($login) and !empty($pswrd)){
     try{
       $chk=$db1->prepare("SELECT * FROM user WHERE login=?");
